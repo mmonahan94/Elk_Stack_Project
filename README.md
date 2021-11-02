@@ -5,7 +5,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![alt text](https://github.com/mmonahan94/Elk_Server_Project/blob/a538e15d6cdf4ca56f742f38e24869bbbecbd21d/Images/Elk-Server-Diagram.jpg)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yaml file may be used to install only certain pieces of it, such as Filebeat.
 
 [elk_config.yml](https://github.com/mmonahan94/Elk_Server_Project/blob/a29f02ce24227afd364d6dd5c65e54db0b748397/Ansible/elk_config.yml)
 
@@ -30,7 +30,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address               | Operating System |
 |----------|----------|--------------------------|------------------|
@@ -48,8 +47,7 @@ Only the host machine can accept connections from the Internet. Access to this m
 - 20.106.140.255
 - 20.122.71.79
 	
-Machines within the network can only be accessed by the ansible container.
-- _Web-X can connect to the ELK server. IP: 20.122.71.79
+Only the JumpBoxProvisioner machine can accept connections from the Internet. 
 
 A summary of the access policies in place can be found in the table below.
 
@@ -58,7 +56,7 @@ A summary of the access policies in place can be found in the table below.
 | Jump Box    |      Yes                  | Personal IP           |
 | Web-1       |      No                   | 10.0.0.4, 10.0.0.9    |
 | Web-2       |      No                   | 10.0.0.4, 10.0.0.8    |
-| Web-X       |      Yes                  | 10.0.0.4, Kibana 5601 |
+| Web-X       |      Yes                  | 10.0.0.4, Kibana      |
 | Red-Team-LB |      Yes                  | Personal IP           |
 
 
@@ -69,15 +67,15 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 
 The playbook implements the following tasks:
-- install Docker
-- install pip3
-- install Docker Python Module
-- increate virtual memory
-- downloand and launch a docker elk container
+- Install Docker
+- Install pip3
+- Install Docker Python Module
+- Increate virtual memory
+- Downloand and launch a docker elk container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Screenshots/Docker_PS.jpg)
+![alt text](https://github.com/mmonahan94/Elk_Server_Project/blob/5fa76ab8366dd4ef2d940553cc12c6d5d2e824be/Images/Docker_PS.JPG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
