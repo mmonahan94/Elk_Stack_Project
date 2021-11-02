@@ -90,6 +90,15 @@ These Beats allow us to collect the following information from each machine:
 - Filebeat allows for a lightweight way to forward and centralize logs and files. This provides a GUI and infographic view in order to track down curious behavior across aggregated logs.
 - Metricbeat allows for a lightweight way to send system and service statistics. This provides a GUI and infographic view of system-level CPU usage, memory, file system, disk IO, network IO statistics, and top-like statistics for every process running on your systems.
 
+### Evidence of Success
+Below are screenshots captured from successful installations of both Filebeat and Metricbeat:
+
+### Successful Filebeat Installation
+![alt text](https://github.com/mmonahan94/Elk_Server_Project/blob/e50fe5a0cfe174adac8e601516779b2730d7f86c/Images/Filebeat_Success.JPG)
+
+### Successful Metricbeat Installation 
+![alt text](https://github.com/mmonahan94/Elk_Server_Project/blob/e50fe5a0cfe174adac8e601516779b2730d7f86c/Images/Metricbeat_Success.JPG)
+
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
