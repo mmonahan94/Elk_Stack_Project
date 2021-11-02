@@ -3,7 +3,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![alt text](https://github.com/mmonahan94/Elk_Server_Project/blob/a7c63eeabaaae6b5553c5d546ed2a620bcbd29ec/Images/Docker_PS.JPG "Docker")
+![alt text](https://github.com/mmonahan94/Elk_Server_Project/blob/a538e15d6cdf4ca56f742f38e24869bbbecbd21d/Images/Elk-Server-Diagram.jpg)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
