@@ -94,9 +94,10 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the entire Project_1 file to /etc/ansible/Project_1.
-- Update the host file to include the IP addresses for the webservers and the elkserver
-- Run the playbook, and navigate to http://<Elk-Server-Public-IP>:5601 to check that the installation worked as expected.
+- Copy the entire Ansible folder to /etc/ansible/<Designated Name>
+- Update the host file to include the IP addresses for your webservers and your elkserver
+- Update each Config file appropriately to your designated machines.
+- Run the playbooks, and navigate to http://<Elk-Server-Public-IP>:5601 to check that the installation worked as expected.
 
 Answer the following questions to fill in the blanks:_
 - There are 2 playbooks. Once called filebeat_playbook.yml and the other metricbeat_playbook.yml. You should copy these to ~/etc/ansible/filebeat and ~/etc/ansible/metricbeat , respectfully.
