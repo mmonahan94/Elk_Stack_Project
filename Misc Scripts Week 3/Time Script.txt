@@ -1,0 +1,9 @@
+#!/bin/bash
+
+awk '/AM/ {print}' All_Losses > AM_Losses
+mv AM_Losses Notes_Player_Analysis
+
+awk '/PM/ {print}' All_Losses > PM_Losses
+mv PM_Losses Notes_Player_Analysis
+
+

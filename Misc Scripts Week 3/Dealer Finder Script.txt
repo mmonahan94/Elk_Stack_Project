@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cat March_15_RD_Names | awk '/05/ && /AM/ {print $1,$2,$3,$4}'
+cat March_15_RD_Names | awk '/08/ && /AM/ {print $1,$2,$3,$4}'
+cat March_15_RD_Names | awk '/02/ && /PM/ {print $1,$2,$3,$4}'
+
