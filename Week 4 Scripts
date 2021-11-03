@@ -1,0 +1,23 @@
+### Check for root access
+if [ "$EUID" -ne 0 ]
+then
+    echo "You do not have root privilege. Please run with sudo"
+    exit
+fi
+
+### Remove files
+rm /<pathway>
+rm /tmp/str.sh
+
+### Copy files
+cp ~/<pathway> <name of copy> 
+
+### Check for or create <user> <name of directory>
+[! -d /home/<user>/<name of directory>] && mkdir /home/<user>/<name of directory>
+echo "created ~/<name of directory>"
+
+### Install packages 
+sudo apt-get install <name of package> -y
+
+### Change apache2 port
+sed -i 's~\<Listen 80\>~Listen 8080~g' /etc/apache2/ports.conf
