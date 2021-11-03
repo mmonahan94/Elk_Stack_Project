@@ -1,13 +1,5 @@
-### Check for root access
-if [ "$EUID" -ne 0 ]
-then
-    echo "You do not have root privilege. Please run with sudo"
-    exit
-fi
-
 ### Remove files
 rm /<pathway>
-rm /tmp/str.sh
 
 ### Copy files
 cp ~/<pathway> <name of copy> 
@@ -21,3 +13,15 @@ sudo apt-get install <name of package> -y
 
 ### Change apache2 port
 sed -i 's~\<Listen 80\>~Listen 8080~g' /etc/apache2/ports.conf
+
+
+#clean tmp and cache
+nano cleanup.sh 
+	#!/bin/bash
+	rm -r /tmp/*
+	rm -r /var/tmp/*
+	apt clean -y
+	rm -r /home/sysadmin/.cache/thumbnails
+	cp cleanup.sh /etc/cron.weekly
+	# sudo cp cleanup.sh /etc/cron.daily
+sudo chmod +x cleanup.sh
